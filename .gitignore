@@ -2,6 +2,10 @@
 node_modules/
 **/node_modules/
 
+# Build artifacts
+dist/
+**/dist/
+
 # Environment variables
 .env
 .env.*
@@ -10,6 +14,10 @@ node_modules/
 
 # Distribution zip archives
 *.zip
+*.tar
+*.gz
+*.rar
+*.7z
 
 # Logs
 *.log

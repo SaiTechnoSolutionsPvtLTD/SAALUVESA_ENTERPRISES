@@ -26,7 +26,7 @@ CREATE TABLE `AdminUsers` (
 
 -- Dumping data for table `AdminUsers` (1 rows)
 INSERT INTO `AdminUsers` (`id`, `email`, `password_hash`, `role`, `refresh_token`, `createdAt`, `updatedAt`) VALUES
-(1, 'admin@saaluvesa.com', '$2a$12$v9MW7Ib9xKQmVAeMLeBOjOe4fzL8391N/yohPfGqHqihyN8E6EQoy', 'admin', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkyODI0Mzc5LCJleHAiOjE3OTM0MjkxNzl9.irQiV2cqW2AfObokQeH_Ao32G0eaRrDZRVnc-Uy0FMM', '2026-09-28 01:25:08', '2026-10-24 01:16:19');
+(1, 'admin@saaluvesa.com', '$2a$12$v9MW7Ib9xKQmVAeMLeBOjOe4fzL8391N/yohPfGqHqihyN8E6EQoy', 'admin', NULL, '2026-09-28 01:25:08', '2026-10-24 01:16:19');
 
 -- --------------------------------------------------------------------
 -- Table structure for table `Products`
@@ -71,11 +71,7 @@ CREATE TABLE `ContactSubmissions` (
   `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
   `updatedAt` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table `ContactSubmissions` (1 rows)
-INSERT INTO `ContactSubmissions` (`id`, `name`, `email`, `phone`, `address`, `postal_code`, `requirement_details`, `status`, `source_product_id`, `createdAt`, `updatedAt`) VALUES
-(46, 'kalaiyarasi', 'kalaiyarasiravi2005@gmail.com', NULL, 'Nanjaikalakurichi', '639002', 'wdwdefdeeeds', 'Responded', NULL, '2026-08-25 04:30:23', '2026-08-25 04:57:15');
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------------------
 -- Table structure for table `Notifications`
@@ -89,11 +85,7 @@ CREATE TABLE `Notifications` (
   `contact_submission_id` int(11) DEFAULT NULL,
   `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table `Notifications` (1 rows)
-INSERT INTO `Notifications` (`id`, `type`, `title`, `is_read`, `contact_submission_id`, `createdAt`) VALUES
-(1, 'contact_submission', 'New enquiry from SANJEEVE P V', 1, 1, '2026-09-28 03:29:00');
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------------------
 -- Table structure for table `SiteSettings`
